@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		494719E21CB56EF7007CECBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494719E11CB56EF7007CECBE /* AppDelegate.swift */; };
-		494719E41CB56EF7007CECBE /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494719E31CB56EF7007CECBE /* MasterViewController.swift */; };
-		494719E61CB56EF7007CECBE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494719E51CB56EF7007CECBE /* DetailViewController.swift */; };
-		494719E91CB56EF7007CECBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494719E71CB56EF7007CECBE /* Main.storyboard */; };
 		494719EB1CB56EF7007CECBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494719EA1CB56EF7007CECBE /* Assets.xcassets */; };
-		494719EE1CB56EF7007CECBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494719EC1CB56EF7007CECBE /* LaunchScreen.storyboard */; };
 		494719F91CB56EF7007CECBE /* LucentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494719F81CB56EF7007CECBE /* LucentTests.swift */; };
-		49471A041CB56EF7007CECBE /* LucentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49471A031CB56EF7007CECBE /* LucentUITests.swift */; };
+		494DBF5D1CB7FAC700D22F40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494DBF5C1CB7FAC700D22F40 /* ViewController.swift */; };
+		494DBF5F1CB7FAFF00D22F40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494DBF5E1CB7FAFF00D22F40 /* Main.storyboard */; };
+		494DBF611CB7FB0500D22F40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494DBF601CB7FB0500D22F40 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,18 +35,15 @@
 /* Begin PBXFileReference section */
 		494719DE1CB56EF7007CECBE /* Lucent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lucent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		494719E11CB56EF7007CECBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		494719E31CB56EF7007CECBE /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		494719E51CB56EF7007CECBE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		494719E81CB56EF7007CECBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		494719EA1CB56EF7007CECBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		494719ED1CB56EF7007CECBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		494719EF1CB56EF7007CECBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		494719F41CB56EF7007CECBE /* LucentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LucentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		494719F81CB56EF7007CECBE /* LucentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LucentTests.swift; sourceTree = "<group>"; };
 		494719FA1CB56EF7007CECBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		494719FF1CB56EF7007CECBE /* LucentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LucentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		49471A031CB56EF7007CECBE /* LucentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LucentUITests.swift; sourceTree = "<group>"; };
-		49471A051CB56EF7007CECBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		494DBF5C1CB7FAC700D22F40 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		494DBF5E1CB7FAFF00D22F40 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		494DBF601CB7FB0500D22F40 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +76,6 @@
 			children = (
 				494719E01CB56EF7007CECBE /* Lucent */,
 				494719F71CB56EF7007CECBE /* LucentTests */,
-				49471A021CB56EF7007CECBE /* LucentUITests */,
 				494719DF1CB56EF7007CECBE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,11 +94,10 @@
 			isa = PBXGroup;
 			children = (
 				494719E11CB56EF7007CECBE /* AppDelegate.swift */,
-				494719E31CB56EF7007CECBE /* MasterViewController.swift */,
-				494719E51CB56EF7007CECBE /* DetailViewController.swift */,
-				494719E71CB56EF7007CECBE /* Main.storyboard */,
+				494DBF5C1CB7FAC700D22F40 /* ViewController.swift */,
 				494719EA1CB56EF7007CECBE /* Assets.xcassets */,
-				494719EC1CB56EF7007CECBE /* LaunchScreen.storyboard */,
+				494DBF5E1CB7FAFF00D22F40 /* Main.storyboard */,
+				494DBF601CB7FB0500D22F40 /* LaunchScreen.storyboard */,
 				494719EF1CB56EF7007CECBE /* Info.plist */,
 			);
 			path = Lucent;
@@ -117,15 +110,6 @@
 				494719FA1CB56EF7007CECBE /* Info.plist */,
 			);
 			path = LucentTests;
-			sourceTree = "<group>";
-		};
-		49471A021CB56EF7007CECBE /* LucentUITests */ = {
-			isa = PBXGroup;
-			children = (
-				49471A031CB56EF7007CECBE /* LucentUITests.swift */,
-				49471A051CB56EF7007CECBE /* Info.plist */,
-			);
-			path = LucentUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +216,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				494719EE1CB56EF7007CECBE /* LaunchScreen.storyboard in Resources */,
+				494DBF611CB7FB0500D22F40 /* LaunchScreen.storyboard in Resources */,
 				494719EB1CB56EF7007CECBE /* Assets.xcassets in Resources */,
-				494719E91CB56EF7007CECBE /* Main.storyboard in Resources */,
+				494DBF5F1CB7FAFF00D22F40 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				494719E61CB56EF7007CECBE /* DetailViewController.swift in Sources */,
-				494719E41CB56EF7007CECBE /* MasterViewController.swift in Sources */,
+				494DBF5D1CB7FAC700D22F40 /* ViewController.swift in Sources */,
 				494719E21CB56EF7007CECBE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,7 +260,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49471A041CB56EF7007CECBE /* LucentUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,25 +277,6 @@
 			targetProxy = 49471A001CB56EF7007CECBE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		494719E71CB56EF7007CECBE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				494719E81CB56EF7007CECBE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		494719EC1CB56EF7007CECBE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				494719ED1CB56EF7007CECBE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		49471A061CB56EF7007CECBE /* Debug */ = {
@@ -488,6 +451,7 @@
 				49471A0A1CB56EF7007CECBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49471A0B1CB56EF7007CECBE /* Build configuration list for PBXNativeTarget "LucentTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +460,7 @@
 				49471A0D1CB56EF7007CECBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49471A0E1CB56EF7007CECBE /* Build configuration list for PBXNativeTarget "LucentUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +469,7 @@
 				49471A101CB56EF7007CECBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
