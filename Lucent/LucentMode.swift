@@ -8,9 +8,9 @@
 
 import Foundation
 
-enum LucentMode {
-    case
-    Steady,
-    Breathing,
-    Clock
+enum LucentMode : Int {
+    case Off = 0
+    case Static = 1
+    case Breathing = 2
+    case Clock = 3
 }

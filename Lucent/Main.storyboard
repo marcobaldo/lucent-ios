@@ -9,7 +9,7 @@
         <!--Quick Settings Detail View Controller-->
         <scene sceneID="AzJ-ax-HIZ">
             <objects>
-                <viewController id="sPI-f3-qXD" customClass="QuickSettingsDetailViewController" customModule="Lucent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sPI-f3-qXD" customClass="QuickSettingsDetailViewController" customModule="Lumos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Br4-H0-Ccf"/>
                         <viewControllerLayoutGuide type="bottom" id="pLD-o4-qeO"/>
@@ -19,12 +19,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W8f-mc-Fhj" customClass="HRColorPickerView">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="50" width="600" height="550"/>
                                 <subviews>
-                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Xs-hf-amT" customClass="HRColorInfoView">
-                                        <rect key="frame" x="8" y="8" width="64" height="64"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SM6-5j-GYm" customClass="HRBrightnessSlider">
                                         <rect key="frame" x="80" y="40" width="512" height="32"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,8 +30,12 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Xs-hf-amT" customClass="HRColorInfoView">
+                                        <rect key="frame" x="8" y="8" width="64" height="64"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uGP-vF-kjP" customClass="HRColorMapView">
-                                        <rect key="frame" x="8" y="80" width="584" height="492"/>
+                                        <rect key="frame" x="8" y="80" width="584" height="462"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="tileSize">
@@ -68,48 +68,67 @@
                                     <outlet property="colorMapView" destination="uGP-vF-kjP" id="OHk-y2-tGJ"/>
                                 </connections>
                             </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Profile name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Zk-X6-l0C">
+                                <rect key="frame" x="8" y="20" width="584" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="W8f-mc-Fhj" firstAttribute="top" secondItem="Br4-H0-Ccf" secondAttribute="bottom" id="1Lc-GW-KIR"/>
                             <constraint firstItem="W8f-mc-Fhj" firstAttribute="leading" secondItem="GtE-Ip-ge8" secondAttribute="leading" id="Gae-E8-UNt"/>
-                            <constraint firstItem="W8f-mc-Fhj" firstAttribute="centerY" secondItem="GtE-Ip-ge8" secondAttribute="centerY" id="LpB-dJ-9Hv"/>
+                            <constraint firstItem="3Zk-X6-l0C" firstAttribute="top" secondItem="Br4-H0-Ccf" secondAttribute="bottom" constant="8" id="JOe-Di-uzJ"/>
+                            <constraint firstItem="pLD-o4-qeO" firstAttribute="top" secondItem="W8f-mc-Fhj" secondAttribute="bottom" id="TiT-Hz-A1c"/>
                             <constraint firstItem="W8f-mc-Fhj" firstAttribute="centerX" secondItem="GtE-Ip-ge8" secondAttribute="centerX" id="dqt-Gc-fzN"/>
+                            <constraint firstItem="3Zk-X6-l0C" firstAttribute="leading" secondItem="W8f-mc-Fhj" secondAttribute="leading" constant="8" id="iAw-cp-VTO"/>
+                            <constraint firstItem="3Zk-X6-l0C" firstAttribute="trailing" secondItem="W8f-mc-Fhj" secondAttribute="trailing" constant="-8" id="nr6-Cj-Zlq"/>
+                            <constraint firstItem="W8f-mc-Fhj" firstAttribute="top" secondItem="Br4-H0-Ccf" secondAttribute="bottom" constant="38" id="x9s-ZA-1UE"/>
+                            <constraint firstItem="3Zk-X6-l0C" firstAttribute="centerX" secondItem="GtE-Ip-ge8" secondAttribute="centerX" id="yUa-lY-x7f"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="colorPickerView" destination="W8f-mc-Fhj" id="oPh-9s-Ap1"/>
+                        <outlet property="colorPickerView" destination="W8f-mc-Fhj" id="teg-c1-hgU"/>
+                        <outlet property="profileNameTextField" destination="3Zk-X6-l0C" id="DM4-iH-E4f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JZN-GL-q0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1015" y="1068"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Profiles-->
         <scene sceneID="JHq-bx-hXA">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="vyF-PQ-6og" customClass="QuickSettingsViewController" customModule="Lucent" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="vyF-PQ-6og" customClass="QuickSettingsViewController" customModule="Lumos" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zki-R7-xZr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="5ek-bM-ITy" style="IBUITableViewCellStyleDefault" id="ieU-EE-ye7">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="90" id="ieU-EE-ye7" customClass="ProfileTableViewCell" customModule="Lumos" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ieU-EE-ye7" id="mCO-9k-tKW">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5ek-bM-ITy">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJa-tS-Q58">
+                                            <rect key="frame" x="8" y="34" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="leadingMargin" secondItem="uJa-tS-Q58" secondAttribute="leading" constant="-16" id="B5e-yr-U50"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="uJa-tS-Q58" secondAttribute="trailing" constant="-16" id="ezm-vA-cxN"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="quickSettingName" destination="uJa-tS-Q58" id="ceQ-ng-7Dh"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -117,7 +136,7 @@
                             <outlet property="delegate" destination="vyF-PQ-6og" id="xsy-OA-yGv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="YUu-Wx-qOO"/>
+                    <navigationItem key="navigationItem" title="Profiles" id="YUu-Wx-qOO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZf-j0-UgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,10 +158,10 @@
             </objects>
             <point key="canvasLocation" x="1015" y="408"/>
         </scene>
-        <!--Split View Controller-->
+        <!--Global Split View Controller-->
         <scene sceneID="ZSf-kH-rKs">
             <objects>
-                <splitViewController id="SNv-4I-OTW" sceneMemberID="viewController">
+                <splitViewController id="SNv-4I-OTW" customClass="GlobalSplitViewController" customModule="Lumos" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="sg2-w4-zMk" kind="relationship" relationship="masterViewController" id="DcE-yw-6nj"/>
                         <segue destination="sPI-f3-qXD" kind="relationship" relationship="detailViewController" id="0VX-ri-0ci"/>

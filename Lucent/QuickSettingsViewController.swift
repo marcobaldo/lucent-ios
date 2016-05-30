@@ -8,7 +8,30 @@
 
 import UIKit
 
+protocol QuickSettingSelectionDelegate : class {
+    func quickSettingSelected(setting : QuickSetting)
+}
+
 class QuickSettingsViewController: UITableViewController {
+    
+    var profiles = [QuickSetting]()
+    weak var delegate : QuickSettingSelectionDelegate?
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder:aDecoder);
+        
+        self.profiles.append(QuickSetting(mode: LucentMode.Off, name: "Off", options: ""))
+        self.profiles.append(QuickSetting(mode: LucentMode.Static, name: "Static white", options: "255255255255"))
+        self.profiles.append(QuickSetting(mode: LucentMode.Static, name: "Kathy (Philips Hue)", options: "230000255255"))
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.tableView.rowHeight = 90.0
+        self.tableView.layoutMargins = UIEdgeInsetsZero
+        self.tableView.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +57,27 @@ class QuickSettingsViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 8
+        return self.profiles.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ProfileTableViewCell
+        
+        let profile = self.profiles[indexPath.row]
+        cell.quickSettingName?.text = profile.name
+        cell.quickSettingName?.textColor = profile.getForegroundColor()
+        cell.backgroundColor = profile.getBackgroundColor()
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let profile = self.profiles[indexPath.row]
+        self.delegate?.quickSettingSelected(profile)
+        
+        if let detailViewController = self.delegate as? QuickSettingsDetailViewController {
+            splitViewController?.showDetailViewController(detailViewController, sender: nil)
+        }
     }
 
     /*

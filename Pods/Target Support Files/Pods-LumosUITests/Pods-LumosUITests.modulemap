@@ -1,0 +1,6 @@
+framework module Pods_LumosUITests {
+  umbrella header "Pods-LumosUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
